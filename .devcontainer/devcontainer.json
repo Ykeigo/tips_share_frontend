@@ -10,7 +10,8 @@
 		"vscode": {
 			"extensions": [
 				"xabikos.JavaScriptSnippets",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"ZainChen.json"
 			]
 		}
 	}, // Workspaceのフォルダを指定
