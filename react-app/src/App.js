@@ -1,10 +1,13 @@
 import "./App.css";
-import MyTips from "./MyTips";
+import MyTips from "./MyTips/MyTips";
+import MyTipsProvider from "./MyTips/MyTipsProvider";
 
 function App() {
   return (
     <div className="App">
-      <MyTips />
+      <MyTipsProvider>
+        <MyTips />
+      </MyTipsProvider>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+{
+  "MyTips": [
+    {
+      "id": "id1",
+      "title": "testはちゃんと書いたほうがいい",
+      "helped_num": 3,
+      "helped_today": false
+    },
+    {
+      "id": "id2",
+      "title": "testはだるいので書かなくていい",
+      "helped_num": 0,
+      "helped_today": false
+    },
+    {
+      "id": "id3",
+      "title": "は？",
+      "helped_num": 1,
+      "helped_today": true
+    }
+  ]
+}
