@@ -2,7 +2,8 @@ import { useContext } from "react";
 import "./MyTips.css";
 import { FaRegLightbulb } from "react-icons/fa";
 import { MyTipsContext, MyTip } from "./MyTipsProvider";
-import { TipsHeplfulButton, TipsForgotButton } from "./TipsHelpfulButton";
+import { TipsHeplfulButton, TipsForgotButton } from "./TipsHelpfulForm";
+import { AddTipForm } from "./AddTipForm";
 
 export default function MyTips() {
   const { myTips } = useContext(MyTipsContext);
@@ -11,6 +12,7 @@ export default function MyTips() {
     <div className="MyTips">
       <div>お役に立ちましたか？</div>
       {myTips.map((tip) => MyTipField(tip))}
+      <AddTipForm />
     </div>
   );
 }
@@ -23,7 +25,7 @@ function MyTipField(myTip: MyTip) {
 
   return (
     <div className="MyTip" key={myTip.id}>
-      <div className="title">title = {myTip.tip.title}</div>
+      <div className="title">{myTip.tip.title}</div>
       <div className="HelpfulLevelBar">
         {TipsHeplfulButton(myTip.id)}
         {TipsForgotButton(myTip.id)}
