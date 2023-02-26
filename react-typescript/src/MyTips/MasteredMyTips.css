@@ -1,0 +1,12 @@
+.MasteredMyTip {
+  min-height: 20px;
+  border: solid grey;
+  border-width: 0px 0px 1px 0px;
+  padding: 10px 10px 10px 10px;
+
+  text-align: left;
+}
+.MasteredMyTips {
+  width: 500px;
+  background-color: rgb(0, 225, 241);
+}

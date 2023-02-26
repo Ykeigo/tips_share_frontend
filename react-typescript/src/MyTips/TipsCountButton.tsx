@@ -36,11 +36,11 @@ export function TipsForgotButton(id: string) {
 
     const current = getTip(id);
     if (current) {
-      const numDiff = current.forgot_today ? 1 : -1;
+      const numDiff = current.forgot_today ? -1 : 1;
       const updated = {
         ...current,
         forgot_today: !current.forgot_today,
-        helpful_num: current.helpful_num + numDiff,
+        forget_num: current.forget_num + numDiff,
       };
       updateTip(updated);
     }

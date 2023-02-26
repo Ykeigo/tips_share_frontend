@@ -1,5 +1,6 @@
 import './App.css';
 import MyTips from "./MyTips/MyTips"
+import MasteredMyTips from "./MyTips/MasteredMyTips"
 import { MyTipsProvider} from "./MyTips/MyTipsProvider";
 
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
     <MyTipsProvider>
         <MyTips />
+        <MasteredMyTips/>
     </MyTipsProvider>
     </div>
   );

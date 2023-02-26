@@ -9,6 +9,7 @@ export type MyTip = {
   id: string;
   tip: Tip;
   helpful_num: number;
+  forget_num: number;
   helped_today: boolean;
   forgot_today: boolean;
 };
@@ -53,6 +54,7 @@ export const MyTipsProvider: React.FC<{ children: React.ReactNode }> = ({
         description: "動くかわからんからね",
       },
       helpful_num: 3,
+      forget_num: 3,
       helped_today: false,
       forgot_today: false,
     },
@@ -63,6 +65,7 @@ export const MyTipsProvider: React.FC<{ children: React.ReactNode }> = ({
         description: "理由なくいい言葉",
       },
       helpful_num: 9,
+      forget_num: 3,
       helped_today: false,
       forgot_today: false,
     },

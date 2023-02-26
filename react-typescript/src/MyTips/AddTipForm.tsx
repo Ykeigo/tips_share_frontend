@@ -10,17 +10,23 @@ export interface AddTipFormValues {
 export function AddTipForm() {
   const { addTip } = useContext(MyTipsContext);
 
-  const { register, handleSubmit } = useForm<AddTipFormValues>();
+  const { register, handleSubmit, reset } = useForm<AddTipFormValues>();
   const onSubmit: SubmitHandler<AddTipFormValues> = (data) => {
     addTip({
       id: "",
       tip: { title: data.Title, description: data.Description },
       helpful_num: 0,
+      forget_num: 0,
       helped_today: false,
       forgot_today: false,
     });
+
+    reset({
+      Title: "",
+      Description: "",
+    });
   };
-  
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
