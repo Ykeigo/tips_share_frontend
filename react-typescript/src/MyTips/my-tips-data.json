@@ -1,0 +1,31 @@
+{
+  "MyTips": [
+    {
+      "id": "id1",
+      "tip": {
+        "title": "testはちゃんと書いたほうがいい",
+        "description": "動くかわからんからね"
+      },
+      "helpful_num": 3,
+      "helped_today": false
+    },
+    {
+      "id": "id2",
+      "tip": {
+        "title": "testはちゃんと書いたほうがいい",
+        "description": "動くかわからんからね"
+      },
+      "helpful_num": 0,
+      "helped_today": false
+    },
+    {
+      "id": "id3",
+      "tip": {
+        "title": "testはちゃんと書いたほうがいい",
+        "description": "動くかわからんからね"
+      },
+      "helpful_num": 1,
+      "helped_today": true
+    }
+  ]
+}
