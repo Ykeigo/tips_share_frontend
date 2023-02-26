@@ -10,6 +10,7 @@ export type MyTip = {
   tip: Tip;
   helpful_num: number;
   helped_today: boolean;
+  forgot_today: boolean;
 };
 
 export type MyTipsContextType = {
@@ -28,6 +29,7 @@ const defaultMyTipsValue = {
   },
   helpful_num: 0,
   helped_today: false,
+  forgot_today: false,
 };
 export const MyTipsContext = createContext<MyTipsContextType>({
   myTips: [],
@@ -52,15 +54,17 @@ export const MyTipsProvider: React.FC<{ children: React.ReactNode }> = ({
       },
       helpful_num: 3,
       helped_today: false,
+      forgot_today: false,
     },
     {
       id: "id2",
       tip: {
-        title: "testはちゃんと書いたほうがいい",
-        description: "動くかわからんからね",
+        title: "役に立つアドバイス",
+        description: "理由なくいい言葉",
       },
-      helpful_num: 3,
+      helpful_num: 9,
       helped_today: false,
+      forgot_today: false,
     },
   ];
   // ユーザ情報の初期値

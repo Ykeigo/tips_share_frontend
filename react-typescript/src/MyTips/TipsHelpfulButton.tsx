@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MyTipsContext, MyTip } from "./MyTipsProvider";
 
-export default function TipsHeplfulButton(id: string) {
+export function TipsHeplfulButton(id: string) {
   const { getTip, updateTip } = useContext(MyTipsContext);
 
   const submit = () => {
@@ -9,7 +9,6 @@ export default function TipsHeplfulButton(id: string) {
 
     const current = getTip(id);
     if (current) {
-      console.log(current.helped_today);
       const numDiff = current.helped_today ? -1 : 1;
       const updated = {
         ...current,
@@ -22,7 +21,36 @@ export default function TipsHeplfulButton(id: string) {
 
   return (
     <div className="TipsHelpfulButton">
-      <button onClick={submit}>{getTip(id)?.helped_today ? "取り消し" : "役立った"}</button>
+      <button onClick={submit}>
+        {getTip(id)?.helped_today ? "取り消し" : "役立った"}
+      </button>
+    </div>
+  );
+}
+
+export function TipsForgotButton(id: string) {
+  const { getTip, updateTip } = useContext(MyTipsContext);
+
+  const submit = () => {
+    //e.preventDefault();
+
+    const current = getTip(id);
+    if (current) {
+      const numDiff = current.forgot_today ? 1 : -1;
+      const updated = {
+        ...current,
+        forgot_today: !current.forgot_today,
+        helpful_num: current.helpful_num + numDiff,
+      };
+      updateTip(updated);
+    }
+  };
+
+  return (
+    <div className="TipsForgotButton">
+      <button onClick={submit}>
+        {getTip(id)?.forgot_today ? "取り消し" : "忘れてた"}
+      </button>
     </div>
   );
 }
