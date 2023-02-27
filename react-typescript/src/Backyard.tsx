@@ -1,4 +1,4 @@
-import "./Background.css";
+import "./Backyard.css";
 import MasteredMyTips from "./MyTips/MasteredMyTips";
 import Discover from "./OthersTips/DiscoverTab";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";

@@ -10,10 +10,12 @@ export default function MyTips() {
   const { myTips } = useContext(MyTipsContext);
 
   return (
-    <div className="MyTips">
+    <div className="MyTipsArea">
       <div>お役に立ちましたか？</div>
-      {myTips.map((tip) => tip.helpful_num < 10 ? MyTipField(tip) : <></>)}
-      <AddTipForm />
+      <div className="MyTips">
+        {myTips.map((tip) => (tip.helpful_num < 10 ? MyTipField(tip) : <></>))}
+        <AddTipForm />
+      </div>
     </div>
   );
 }
