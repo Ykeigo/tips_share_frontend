@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./MyTips.css";
 import { GrStatusGood } from "react-icons/gr";
-import { GiBrightExplosion } from "react-icons/gi";
+import { GiFireflake } from "react-icons/gi";
 import { MyTipsContext, MyTip } from "./MyTipsProvider";
 import { TipsHeplfulButton, TipsForgotButton } from "./TipsCountButton";
 import { AddTipForm } from "./AddTipForm";
@@ -25,7 +25,7 @@ function MyTipField(myTip: MyTip) {
   }
   const forgetIcons = [];
   for (let i = 0; i < myTip.forget_num; i++) {
-    forgetIcons.push(<GiBrightExplosion key={i} />);
+    forgetIcons.push(<GiFireflake key={i} />);
   }
 
   return (

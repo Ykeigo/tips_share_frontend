@@ -1,3 +1,9 @@
+.MyTips {
+  min-height: 300px;
+  background-color: rgb(217, 255, 160);
+  margin: 20px;
+}
+
 .MyTip {
   min-height: 80px;
   border: solid grey;
@@ -5,10 +11,6 @@
   padding: 10px 10px 10px 10px;
 
   text-align: left;
-}
-.MyTips {
-  width: 500px;
-  background-color: rgb(217, 255, 160);
 }
 
 .HelpfulLevelBar {

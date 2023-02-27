@@ -1,9 +1,5 @@
 import React, { createContext, useState } from "react";
-
-export type Tip = {
-  title: string;
-  description: string;
-};
+import {Tip} from "../Tip"
 
 export type MyTip = {
   id: string;
