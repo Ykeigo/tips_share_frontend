@@ -5,7 +5,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 	},
-	"workspaceFolder": "/workspace/tips_share_frontend",
+	"workspaceFolder": "/workspaces/tips_share_frontend",
 	"customizations": {
 		"vscode": {
 			"extensions": [
